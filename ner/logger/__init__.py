@@ -1,6 +1,6 @@
 import logging
 import os
-from ner.constant import *
+from ner.constants import *
 
 logs_path = os.path.join(os.getcwd(), "logs", TIMESTAMP)
 
