@@ -33,7 +33,7 @@ git push origin main
 ```bash
 #Gcloud cli download link: https://cloud.google.com/sdk/docs/install#windows
 
-aws configure
+gcloud init
 ```
 
 
