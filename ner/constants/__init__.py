@@ -27,3 +27,17 @@ DF_TRAIN_FILE_NAME = "df_train.pkl"
 DF_VAL_FILE_NAME = "df_val.pkl"
 DF_TEST_FILE_NAME = "df_test.pkl"
 UNIQUE_LABELS_FILE_NAME = "unique_labels.pkl"
+
+
+
+# Model Trainer 
+
+MODEL_TRAINING_ARTIFACTS_DIR = "ModelTrainingArtifacts"
+LEARNING_RATE = 5e-3
+EPOCHS = 1
+BATCH_SIZE = 2
+BERT_MODEL_INSTANCE_NAME = "bert_model_instance.pt"
+TOKENIZER_FILE_NAME = "tokenizer.pkl"
+
+
+MODEL_EVALUATION_ARTIFACTS_DIR = "ModelEvaluationArtifacts"
