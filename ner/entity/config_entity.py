@@ -89,3 +89,13 @@ class ModelPusherConfig:
 
 
 
+@dataclass
+class ModelPredictorConfig:
+    def __init__(self):
+        self.tokenizer_local_path: str = TOKENIZER_FILE_NAME
+        self.ids_to_labels_local_path: str = IDS_TO_LABELS_FILE_NAME
+        self.best_model_dir: str = BEST_MODEL_DIR
+        self.best_model_from_gcp_path: str = os.path.join(BEST_MODEL_DIR)
+        self.best_model_path: str = os.path.join(BEST_MODEL_DIR, GCP_MODEL_NAME)
+
+
