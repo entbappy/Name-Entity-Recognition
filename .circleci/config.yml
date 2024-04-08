@@ -5,6 +5,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     resource_class: medium
+
     steps:
       - checkout
 
@@ -56,8 +57,6 @@ jobs:
       GAR_IMAGE_NAME: ner-bert
       IMAGE_TAG: latest
     steps:
-      - checkout
-
       - run:
           name: google cloud authentication
           command: |
