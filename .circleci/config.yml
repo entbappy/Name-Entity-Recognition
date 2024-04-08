@@ -50,7 +50,7 @@ jobs:
 
   continuous-deployment:
     machine: true
-    resource_class: deep-learning-01/dl-ineuron
+    resource_class: bappy/nertest
     environment:
       REPOSITORY: ner-bert
       GAR_IMAGE_NAME: ner-bert
