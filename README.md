@@ -28,7 +28,7 @@ git push origin main
 ```
 
 
-## AWS GCP Configuration
+## GCP Configuration
 
 ```bash
 #Gcloud cli download link: https://cloud.google.com/sdk/docs/install#windows
@@ -59,7 +59,7 @@ python app.py
 ## GCP CICD Deployment with CircleCI:
 
 - artifact registry  --> create a repository
-- change line 41,49,73,76,53 in circleci config
+- change line 42,50,72,76,54 in circleci config
 - Opne circleci --> create a project
 
 

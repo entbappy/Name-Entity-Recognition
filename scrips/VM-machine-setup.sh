@@ -39,7 +39,7 @@ sudo nano /etc/opt/circleci/launch-agent-config.yaml
 
 # Add API in the file and change permissions
 api:
-    auth_token: 50e54784c203bf6c8f523d341b717c28136442b42d5c9ab8dc2ddfd2975ba02e301f268242e67425
+    auth_token: fe1934e387e8da6bc6e1b7370e2b543e71adcdcb36ae5df015ddfba702654bfcd9d31078e3fbbfd2
 
 runner:
     name: self-hosted
