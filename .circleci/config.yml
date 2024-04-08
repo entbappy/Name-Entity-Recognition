@@ -73,7 +73,7 @@ jobs:
         
       - run:
           name: Start Docker container
-          command: docker compose up -d
+          command: docker-compose up -d
 
       - run:
           name: free up system space
