@@ -76,6 +76,9 @@ WantedBy = multi-user.target
 ##############
 sudo chown root: /usr/lib/systemd/system/circleci.service
 sudo chmod 644 /usr/lib/systemd/system/circleci.service
+sudo usermod -aG docker circleci
+newgrp docker
+
 
 # Start CircleCI
 sudo systemctl enable circleci.service
