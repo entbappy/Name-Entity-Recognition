@@ -38,7 +38,7 @@ jobs:
 
       - run:
           name: build and tag
-          command: docker build -t $GOOGLE_COMPUTE_ZONE-docker.pkg.dev/${GOOGLE_PROJECT_ID}/$REPOSITORY/$IMAGE_NAME:$IMAGE_TAG .
+          command: docker build -t asia-south1-docker.pkg.dev/hybrid-shelter-398207/ner-bert/ner-bert:latest .
 
       - run:
           name: configure docker login
@@ -46,7 +46,7 @@ jobs:
 
       - run:
           name: push to private repository
-          command: docker push $GOOGLE_COMPUTE_ZONE-docker.pkg.dev/${GOOGLE_PROJECT_ID}/$REPOSITORY/$IMAGE_NAME:$IMAGE_TAG
+          command: docker push asia-south1-docker.pkg.dev/hybrid-shelter-398207/ner-bert/ner-bert:latest
 
   continuous-deployment:
     machine: true
@@ -70,19 +70,17 @@ jobs:
 
       - run:
           name: pull image from private repository
-          command: docker pull ${GOOGLE_COMPUTE_ZONE}-docker.pkg.dev/${GOOGLE_PROJECT_ID}/$REPOSITORY/$GAR_IMAGE_NAME:$IMAGE_TAG
-
+          command: docker pull asia-south1-docker.pkg.dev/hybrid-shelter-398207/ner-bert/ner-bert:latest
+        
       - run:
-          name: Remove Already Running Container
-          command: docker ps -q --filter "name=${IMAGE_NAME}" | grep -q . && docker stop ${IMAGE_NAME} && docker rm -fv ${IMAGE_NAME} || true
+          name: Start Docker container
+          command: docker compose up -d
 
       - run:
           name: free up system space
           command: docker system prune -f
 
-      - run:
-          name: start container
-          command: docker run --name=${IMAGE_NAME} -d -p 80:8080 ${GOOGLE_COMPUTE_ZONE}-docker.pkg.dev/${GOOGLE_PROJECT_ID}/$REPOSITORY/$GAR_IMAGE_NAME:$IMAGE_TAG
+      
 
 workflows:
   CICD:

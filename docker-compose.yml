@@ -1,0 +1,9 @@
+version: '3'
+services:
+  application:
+    image: asia-south1-docker.pkg.dev/hybrid-shelter-398207/ner-bert/ner-bert:latest
+    ports:
+      - "80:8080"
+
+
+

@@ -54,3 +54,10 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
+
+
+## GCP:
+
+- artifact registry
+
+- line 41,49,73
