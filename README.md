@@ -56,14 +56,16 @@ python app.py
 ```
 
 
-## GCP:
+## GCP CICD Deployment with CircleCI:
 
-- artifact registry
-- line 41,49,73,53 in circleci config
-- Opne circleci 
+- artifact registry  --> create a repository
+- change line 41,49,73,76,53 in circleci config
+- Opne circleci --> create a project
 
 
-### Environment variables
+### Set Environment variables in CircleCI
+
+```bash
 
 GCLOUD_SERVICE_KEY --> service account
 
@@ -71,9 +73,9 @@ GOOGLE_COMPUTE_ZONE = asia-south1
 
 GOOGLE_PROJECT_ID
 
+```
 
-- VM instances
+## Create a VM instances & setup scripts
 
 
-50e54784c203bf6c8f523d341b717c28136442b42d5c9ab8dc2ddfd2975ba02e301f268242e67425
 
